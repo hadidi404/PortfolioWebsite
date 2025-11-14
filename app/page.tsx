@@ -1,15 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import HeroSection from './components/HeroSection/HeroSection';
+import SectionsLoader from './components/SectionsLoader';
 
 const App: React.FC = () => {
-  return (
-    <>
-      <Navbar />
-      <HeroSection />
-      {/* Future sections: About, Skills, Projects, Contact */}
-    </>
-  );
+  return <SectionsLoader />;
 };
 
 export default App;
