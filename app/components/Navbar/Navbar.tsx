@@ -12,13 +12,13 @@ const Navbar: React.FC = () => {
 
       <ul className="hidden sm:flex list-none gap-8">
         <li>
-          <a ref={register as any} className="font-text-gray-300 hover:text-white transition-colors text-gray-300 hover:text-white transition-colors relative group group text-white hover:text-indigo-400 transition-colors reveal" href="#about" style={{ ['--i' as any]: 1 }}>About</a>
+          <a ref={register as any} className="font-semibold text-text-gray-300 hover:text-white transition-colors relative group hover:text-indigo-400 transition-colors reveal" href="#about" style={{ ['--i' as any]: 1 }}>About</a>
         </li>
         <li>
-          <a ref={register as any} className="font-text-gray-300 hover:text-white transition-colors relative group text-white hover:text-indigo-400 text-gray-300 hover:text-white transition-colors relative group-colors reveal" href="#skills" style={{ ['--i' as any]: 2 }}>Skills</a>
+          <a ref={register as any} className="font-semibold text-text-gray-300 hover:text-white transition-colors relative group hover:text-indigo-400 transition-colors reveal" href="#skills" style={{ ['--i' as any]: 2 }}>Skills</a>
         </li>
         <li>
-          <a ref={register as any} className="font-semibold text-gray-300 hover:text-white transition-colors relative group-white hover:text-indigo-400 transition-colors reveal" href="#projects" style={{ ['--i' as any]: 3 }}>Projects</a>
+          <a ref={register as any} className="font-semibold text-text-gray-300 hover:text-white transition-colors relative group hover:text-indigo-400 transition-colors reveal" href="#projects" style={{ ['--i' as any]: 3 }}>Projects</a>
         </li>
         <li>
           <a ref={register as any} className="font-semibold text-text-gray-300 hover:text-white transition-colors relative group hover:text-indigo-400 transition-colors reveal" href="#contact" style={{ ['--i' as any]: 4 }}>Contact</a>

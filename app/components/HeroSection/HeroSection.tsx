@@ -34,13 +34,13 @@ const HeroSection: React.FC = () => {
               Hi, my name is
             </h1>
 
-            <h2 ref={register} className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient pb-1 reveal" style={{ ['--i' as any]: 2 }}>
+            <h2 ref={register} className="text-5xl md:text-7xl font-bold bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient pb-1 reveal" style={{ ['--i' as any]: 2 }}>
               Rayson Barnachia
             </h2>
 
             <h3 ref={register} className="text-3xl md:text-5xl text-gray-300 reveal" style={{ ['--i' as any]: 3 }}>
               I build{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 things
               </span>{' '}
               for the web.

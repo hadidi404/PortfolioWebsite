@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
     >
       <div className="max-w-5xl mx-auto w-full">
         <h2 ref={register as any} className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
-          Projects
+          Featured Projects
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

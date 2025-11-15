@@ -9,6 +9,9 @@ const Skills: React.FC = () => {
     { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
     { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL'] },
     { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
+    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
+    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
+    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] }
   ];
 
   return (
@@ -23,18 +26,29 @@ const Skills: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skills.map((skillGroup, idx) => (
-            <div key={skillGroup.category} ref={register as any} className="p-6 bg-gray-900 rounded-lg reveal" style={{ ['--i' as any]: idx + 1 }}>
-              <h3 className="text-2xl font-semibold mb-4 text-pink-400">
+            <article
+              key={skillGroup.category}
+              ref={register as any}
+              className="reveal p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-md hover:shadow-pink-500/20 transition-transform transform hover:-translate-y-1"
+              style={{ ['--i' as any]: idx + 1 }}
+              aria-labelledby={`skills-${idx}`}
+            >
+              <h3 id={`skills-${idx}`} className="text-2xl font-semibold mb-4 text-pink-400">
                 {skillGroup.category}
               </h3>
-              <ul className="space-y-2">
+
+              <div className="flex flex-wrap gap-2">
                 {skillGroup.items.map((skill) => (
-                  <li key={skill} className="text-gray-300">
-                    • {skill}
-                  </li>
+                  <span
+                    key={skill}
+                    className="inline-block bg-white/6 text-gray-200 px-3 py-1 rounded-full text-sm"
+                    title={skill}
+                  >
+                    {skill}
+                  </span>
                 ))}
-              </ul>
-            </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>
