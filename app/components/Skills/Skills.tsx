@@ -4,7 +4,7 @@ import React from 'react';
 import useRevealGroup from '../../hooks/useRevealGroup';
 
 const Skills: React.FC = () => {
-  const register = useRevealGroup({ threshold: 0.12, once: true });
+  const register = useRevealGroup({ threshold: 0.12 });
   const skills = [
     { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
     { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL'] },
@@ -24,14 +24,13 @@ const Skills: React.FC = () => {
           Skills and Expertise
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-8" style={{ ['--reveal-step' as any]: '50ms' }}>
           {skills.map((skillGroup, idx) => (
             <article
-              key={skillGroup.category}
+              key={`${skillGroup.category}-${idx}`}
               ref={register as any}
               className="reveal p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-md hover:shadow-pink-500/20 transition-transform transform hover:-translate-y-1"
               style={{ ['--i' as any]: idx + 1 }}
-              aria-labelledby={`skills-${idx}`}
             >
               <h3 id={`skills-${idx}`} className="text-2xl font-semibold mb-4 text-pink-400">
                 {skillGroup.category}

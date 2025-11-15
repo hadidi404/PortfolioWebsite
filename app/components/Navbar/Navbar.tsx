@@ -4,7 +4,7 @@ import React from 'react';
 import useRevealGroup from '../../hooks/useRevealGroup';
 
 const Navbar: React.FC = () => {
-  const register = useRevealGroup({ threshold: 0, once: true });
+  const register = useRevealGroup({ threshold: 0 });
 
   return (
     <nav className="fixed top-0 w-full bg-neutral-900 text-white flex items-center justify-between py-4 px-20 z-50">

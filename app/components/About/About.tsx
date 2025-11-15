@@ -4,7 +4,7 @@ import React from 'react';
 import useRevealGroup from '../../hooks/useRevealGroup';
 
 const About: React.FC = () => {
-  const register = useRevealGroup({ threshold: 0.15, once: true });
+  const register = useRevealGroup({ threshold: 0.15 });
 
   const paragraphs = [
     `Hello! I'm a passionate developer who enjoys creating things that live on the internet. My interest in web development started back in 2015 when I decided to try editing custom themes — turns out hacking together a custom layout taught me a lot about HTML & CSS!`,

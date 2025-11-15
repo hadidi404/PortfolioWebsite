@@ -4,7 +4,7 @@ import React from 'react';
 import useRevealGroup from '../../hooks/useRevealGroup';
 
 const Projects: React.FC = () => {
-  const register = useRevealGroup({ threshold: 0.12, once: true });
+  const register = useRevealGroup({ threshold: 0.12 });
   const projects = [
     {
       title: 'Project One',

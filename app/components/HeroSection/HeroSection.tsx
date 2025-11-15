@@ -5,7 +5,7 @@ import profileImage from '../../assets/profile.jpg'; // Adjust path as needed
 import useRevealGroup from '../../hooks/useRevealGroup';
 
 const HeroSection: React.FC = () => {
-  const register = useRevealGroup({ threshold: 0.1, once: true });
+  const register = useRevealGroup({ threshold: 0.1 });
 
   return (
     <>

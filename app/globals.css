@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+/* Stagger timing step for reveal animations. Change this to increase/decrease
+   the per-item step globally. Can be overridden per-section with the
+   --reveal-step custom property. */
+:root {
+  --reveal-step: 120ms; /* previously 80ms */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,7 +50,7 @@ body {
 }
 
 .reveal-stagger > * {
-  transition-delay: calc(var(--i, 0) * 80ms);
+  transition-delay: calc(var(--i, 0) * var(--reveal-step));
 }
 
 @media (prefers-reduced-motion: reduce) {

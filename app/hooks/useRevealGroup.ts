@@ -6,10 +6,8 @@ type Options = {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-  once?: boolean;
 };
-
-export default function useRevealGroup(options: Options = { threshold: 0.15, once: true }) {
+export default function useRevealGroup(options: Options = { threshold: 0.15 }) {
   const elements = useRef<Set<Element>>(new Set());
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -20,14 +18,17 @@ export default function useRevealGroup(options: Options = { threshold: 0.15, onc
   }, []);
 
   useEffect(() => {
-    const { once = true, threshold = 0.15, root = null, rootMargin = '0px' } = options as Options;
+    const { threshold = 0.15, root = null, rootMargin = '0px' } = options as Options;
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // element entered viewport -> make visible
             entry.target.classList.add('is-visible');
-            if (once) observerRef.current?.unobserve(entry.target);
+          } else {
+            // element left viewport -> remove visible class so animation can re-trigger
+            entry.target.classList.remove('is-visible');
           }
         });
       },
@@ -41,7 +42,7 @@ export default function useRevealGroup(options: Options = { threshold: 0.15, onc
       observerRef.current = null;
       elements.current.clear();
     };
-  }, [options.threshold, options.root, options.rootMargin, options.once]);
+  }, [options.threshold, options.root, options.rootMargin]);
 
   return register;
 }
