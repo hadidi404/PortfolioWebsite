@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Reveal-on-scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition: opacity 420ms cubic-bezier(.22,.9,.3,1), transform 420ms cubic-bezier(.22,.9,.3,1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal.pop {
+  transition-duration: 540ms;
+}
+
+.reveal-stagger > * {
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
