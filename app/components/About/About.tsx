@@ -2,6 +2,7 @@
 
 import React from 'react';
 import useRevealGroup from '../../hooks/useRevealGroup';
+import Reveal from '../Reveal';
 
 const About: React.FC = () => {
   const register = useRevealGroup({ threshold: 0.15 });
@@ -18,29 +19,30 @@ const About: React.FC = () => {
       className="py-20 flex flex-col items-center justify-center bg-gray-900 text-white px-4"
     >
       <div className="max-w-3xl mx-auto text-left">
-        <h2 ref={register as any} className="text-4xl md:text-5xl mb-8 reveal" style={{ ['--i' as any]: 0 }}>
+        <Reveal as="h2" i={0} register={register} className="text-4xl md:text-5xl mb-8">
           About <span className="text-pink-400">Me</span>
-        </h2>
+        </Reveal>
 
         {/* Card is now a reveal target so it animates as a whole; set --i so it's between heading (0) and paragraphs */}
-        <div
-          ref={register as any}
-          className="backdrop-blur-md bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/20 reveal"
-          style={{ ['--i' as any]: 1 }}
+        <Reveal
+          i={1}
+          register={register}
+          className="backdrop-blur-md bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/20"
         >
           <div className="flex flex-col">
             {paragraphs.map((txt, idx) => (
-              <p
+              <Reveal
                 key={idx}
-                ref={register as any}
-                className={`mt-4 text-gray-300 leading-relaxed reveal`}
-                style={{ ['--i' as any]: idx + 2 }} // shift paragraphs to start after the card
+                as="p"
+                i={idx + 2}
+                register={register}
+                className="mt-4 text-gray-300 leading-relaxed"
               >
                 {txt}
-              </p>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
