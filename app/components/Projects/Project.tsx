@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
       className="py-20 flex flex-col items-center justify-center bg-gray-900 text-white px-4"
     >
       <div className="max-w-5xl mx-auto w-full">
-        <h2 ref={register as any} className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
+        <h2 ref={register as any} className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
           Featured Projects
         </h2>
 
@@ -41,10 +41,10 @@ const Projects: React.FC = () => {
             <div
               key={project.title}
               ref={register as any}
-              className="p-6 bg-gray-800 rounded-lg hover:shadow-lg hover:shadow-pink-500/50 transition reveal"
+              className="p-6 bg-gray-800 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition reveal"
               style={{ ['--i' as any]: idx + 1 }}
             >
-              <h3 className="text-2xl font-semibold mb-2 text-pink-400">
+              <h3 className="text-2xl font-semibold mb-2 text-cyan-400">
                 {project.title}
               </h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-sm bg-pink-500/20 text-pink-300 rounded-full"
+                    className="px-3 py-1 text-sm bg-cyan-500/20 text-cyan-300 rounded-full"
                   >
                     {tech}
                   </span>
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
               </div>
               <a
                 href={project.link}
-                className="text-pink-400 hover:text-pink-300 font-semibold transition"
+                className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
               >
                 View Project →
               </a>

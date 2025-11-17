@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
       className="py-20 flex flex-col items-center justify-center bg-gray-900 text-white px-4"
     >
       <div className="max-w-2xl mx-auto text-center">
-        <h2 ref={register as any} className="text-4xl font-bold mb-6 bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
+        <h2 ref={register as any} className="text-4xl font-bold mb-6 bg-linear-to-r from-[#f5a353] via-[#53d0f5] to-[#f553a3] bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
           Get In Touch
         </h2>
 
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
           <a
             ref={register as any}
             href="mailto:raysonbarnachia@gmail.com"
-            className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded transition reveal"
+            className="bg-[#53d0f5] hover:bg-[#3ab8dd] text-white font-semibold py-3 px-8 rounded transition reveal"
             style={{ ['--i' as any]: 2 }}
           >
             Send Email
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
             href="https://linkedin.com/in/rayson-barnachia-039464256"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-semibold py-3 px-8 rounded transition reveal"
+            className="border-2 border-[#53d0f5] text-[#53d0f5] hover:bg-[#53d0f5] hover:text-white font-semibold py-3 px-8 rounded transition reveal"
             style={{ ['--i' as any]: 3 }}
           >
             Connect on LinkedIn

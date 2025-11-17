@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
       className="py-20 flex flex-col items-center justify-center bg-gray-900 text-white px-4"
     >
       <div className="max-w-4xl mx-auto w-full">
-        <h2 ref={register as any} className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
+        <h2 ref={register as any} className="text-4xl font-bold mb-12 text-center bg-linear-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent reveal" style={{ ['--i' as any]: 0 }}>
           Skills and Expertise
         </h2>
 
@@ -29,10 +29,10 @@ const Skills: React.FC = () => {
             <article
               key={`${skillGroup.category}-${idx}`}
               ref={register as any}
-              className="reveal p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-md hover:shadow-pink-500/20 transition-transform transform hover:-translate-y-1"
+              className="reveal p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-md hover:shadow-cyan-500/20 transition-transform transform hover:-translate-y-1"
               style={{ ['--i' as any]: idx + 1 }}
             >
-              <h3 id={`skills-${idx}`} className="text-2xl font-semibold mb-4 text-pink-400">
+              <h3 id={`skills-${idx}`} className="text-2xl font-semibold mb-4 text-cyan-400">
                 {skillGroup.category}
               </h3>
 

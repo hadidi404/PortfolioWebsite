@@ -12,43 +12,43 @@ const HeroSection: React.FC = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen pt-15 flex items-center justify-center text-center bg-gray-900 text-white px-4"
+        className="py-20 pt-32 flex items-center justify-center text-center bg-gray-900 text-white px-4"
       >
         {/* single wrapper so the whole block is centered vertically as one unit */}
         <div className="flex flex-col items-center justify-center space-y-6">
           <div
             ref={register as any}
-            className="w-36 h-36 rounded-full overflow-hidden  reveal"
+            className="relative w-36 h-36 reveal"
             style={{ ['--i' as any]: 0 }}
           >
-            <img
-              src={profileImage.src}
-              alt="Profile"
-              className="w-full h-full object-top object-cover scale-110"
-            />
+            {/* Animated gradient border */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 animate-spin-slow p-1">
+              <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
+                <img
+                  src={profileImage.src}
+                  alt="Profile"
+                  className="w-full h-full object-top object-cover scale-110"
+                /> 
+              </div>
+            </div>
           </div>
 
           {/* Uniform vertical spacing between name, line and paragraph */}
           <div className="flex flex-col items-center space-y-2">
-            <h1 ref={register} className="text-sm uppercase tracking-widest text-pink-500 reveal" style={{ ['--i' as any]: 1 }}>
+            <h1 ref={register} className="text-sm uppercase tracking-widest text-cyan-400 reveal" style={{ ['--i' as any]: 1 }}>
               Hi, my name is
             </h1>
 
-            <h2 ref={register} className="text-5xl md:text-7xl font-bold bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient pb-1 reveal" style={{ ['--i' as any]: 2 }}>
+            <h2 ref={register} className="text-5xl md:text-7xl font-bold bg-linear-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent animate-gradient pb-1 reveal" style={{ ['--i' as any]: 2 }}>
               Rayson Barnachia
             </h2>
 
             <h3 ref={register} className="text-3xl md:text-5xl text-gray-300 reveal" style={{ ['--i' as any]: 3 }}>
-              I build{' '}
-              <span className="bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                things
-              </span>{' '}
-              for the web.
+              Software Developer
             </h3>
 
             <p ref={register} className="text-gray-400 max-w-2xl text-lg reveal" style={{ ['--i' as any]: 4 }}>
-              I'm a software developer specializing in building exceptional digital experiences.
-              Currently, I'm focused on building accessible, human-centered products.
+             Crafting efficient and user-focused digital solutions
             </p>
           </div>
 
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
             <a
               ref={register}
               href="#projects"
-              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded shadow transition reveal"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-6 rounded shadow transition reveal"
               style={{ ['--i' as any]: 5 }}
             >
               View My Work
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
             <a
               ref={register}
               href="#contact"
-              className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-semibold py-2 px-6 rounded transition reveal"
+              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-2 px-6 rounded transition reveal"
               style={{ ['--i' as any]: 6 }}
             >
               Contact Me
