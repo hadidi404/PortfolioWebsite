@@ -6,12 +6,10 @@ import useRevealGroup from '../../hooks/useRevealGroup';
 const Skills: React.FC = () => {
   const register = useRevealGroup({ threshold: 0.12 });
   const skills = [
-    { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma'] }
+    { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS'] },
+    { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Python', 'Java', 'PHP'] },
+    { category: 'Mobile', items: ['Flutter', 'Dart'] },
+    { category: 'Tools & Platforms', items: ['Git', 'Docker', 'Firebase', 'VS Code', 'Figma', 'Jupyter Notebook'] },
   ];
 
   return (
